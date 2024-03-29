@@ -40,6 +40,7 @@ REGION = 'NL01'
 #FOLDER_drive='/Users/3986209/Library/CloudStorage/OneDrive-UniversiteitUtrecht/'
 #FOLDER_project=FOLDER_drive+'Projects/ccmetrics/'
 #FOLDER_pecd = FOLDER_drive+'Data/PECD/HIST/ENER/'
+FOLDER_project = 'C:/Users/cozianbas/Documents/Analyses PECD/Scripts/CREDI/'
 FOLDER_pecd = 'F:/C3S_PECD_v4.1/HIST/ENER/'
 
 # file name

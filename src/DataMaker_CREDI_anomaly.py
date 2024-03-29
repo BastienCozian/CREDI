@@ -8,7 +8,10 @@ Updated on 2023-06-14
 
 @author: Laurens P. Stoop
 """
-
+#%%
+# =============================================================================
+# Load modules, functions, path, and main parameters
+# =============================================================================
 
 # load the dependencies
 import numpy as np
@@ -19,7 +22,7 @@ from datetime import datetime
 
 
 # The scripts
-sys.path.append('/Users/3986209/Library/CloudStorage/OneDrive-UniversiteitUtrecht/Projects/ccmetrics/src/')
+sys.path.append('C:/Users/cozianbas/Documents/Analyses PECD/Scripts/CREDI/src/')
 import CREDIfunctions as credi
 
 
@@ -34,14 +37,14 @@ REGION = 'NL01'
 # =============================================================================
 
 # Define some folders
-FOLDER_drive='/Users/3986209/Library/CloudStorage/OneDrive-UniversiteitUtrecht/'
-FOLDER_project=FOLDER_drive+'Projects/ccmetrics/'
-FOLDER_pecd = FOLDER_drive+'Data/PECD/HIST/ENER/'
+#FOLDER_drive='/Users/3986209/Library/CloudStorage/OneDrive-UniversiteitUtrecht/'
+#FOLDER_project=FOLDER_drive+'Projects/ccmetrics/'
+#FOLDER_pecd = FOLDER_drive+'Data/PECD/HIST/ENER/'
+FOLDER_pecd = 'F:/C3S_PECD_v4.1/HIST/ENER/'
 
 # file name
 fileName_SPV = 'SPV/PEON/H_ERA5_ECMW_T639_SPV_0000m_Pecd_PEON_S198001010000_E202112312300_CFR_TIM_01h_NA-_noc_org_NA_NA---_NA---_PhM01.csv'
-fileName_WON = 'WON/PEON/H_ERA5_ECMW_T639_WON_NA---_Pecd_PEON_S198001010000_E202112312300_CFR_TIM_01h_NA-_noc_org_30_NA---_NA---_PhM01.csv'
-
+fileName_WON = 'WON/PEON/H_ERA5_ECMW_T639_WON_NA---_Pecd_PEON_S198001010000_E202112312300_CFR_TIM_01h_NA-_noc_org_30_NA---_NA---_PhM02.csv'
 
 #%%
 # =============================================================================

@@ -79,7 +79,8 @@ REGION = 'NL01'
 # =============================================================================
 
 # Define some folders
-FOLDER_project='/Users/3986209/Library/CloudStorage/OneDrive-UniversiteitUtrecht/Projects/ccmetrics/'
+#FOLDER_project='/Users/3986209/Library/CloudStorage/OneDrive-UniversiteitUtrecht/Projects/ccmetrics/'
+FOLDER_project = 'C:/Users/cozianbas/Documents/Analyses PECD/Scripts/CREDI/'
 
 
 ## Retrieve from disk
@@ -106,11 +107,13 @@ ds = xr.Dataset()
 # Solar
 ds['SPVanom_event'] = ds_SPVanom.rolling(time=PERIOD_length).construct(time = "event_hour", stride=PERIOD_stride).anom
 ds['SPV_event'] = ds_SPVanom.rolling(time=PERIOD_length).construct(time = "event_hour", stride=PERIOD_stride).SPV
+# Must be hourly (=1h) time series to compute the FLH
 ds['CREDI_spv'] = ds.SPVanom_event.cumsum(dim='event_hour')
 
 # Wind
 ds['WONanom_event'] = ds_WONanom.rolling(time=PERIOD_length).construct(time = "event_hour", stride=PERIOD_stride).anom
 ds['WON_event'] = ds_WONanom.rolling(time=PERIOD_length).construct(time = "event_hour", stride=PERIOD_stride).WON
+# Must be hourly (=1h) time series to compute the FLH 
 ds['CREDI_won'] = ds.WONanom_event.cumsum(dim='event_hour')
 
 
